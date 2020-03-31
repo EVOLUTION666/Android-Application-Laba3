@@ -7,10 +7,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class ThirdActivity extends AppCompatActivity {
     DatabaseHelper db = new DatabaseHelper(this);
     EditText editName, editDate;
     Button btnAddData;
+    SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    String dateString = format.format( new Date());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +23,6 @@ public class ThirdActivity extends AppCompatActivity {
         setContentView(R.layout.activity_third);
 
         editName = (EditText)findViewById(R.id.editTextName);
-        editDate = (EditText)findViewById(R.id.editTextDate);
         btnAddData = (Button)findViewById(R.id.AddButton);
 
         AddData();
@@ -29,7 +33,7 @@ public class ThirdActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        db.addContact(new Contact(editName.toString(), editDate.toString()));
+                        db.addContact(new Contact(editName.getText().toString(), dateString.toString()));
                     }
                 }
         );

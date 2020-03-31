@@ -8,13 +8,15 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
 public class SecondActivity extends AppCompatActivity {
 
     TextView textView;
-    Date date = new Date();
+    SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    String dateString = format.format( new Date());
     String text = "";
 
     @Override
@@ -26,9 +28,11 @@ public class SecondActivity extends AppCompatActivity {
 
         DatabaseHelper db = new DatabaseHelper(this);
 
+//        db.deleteAll();
+
         //inserting contacts
-//        db.addContact(new Contact(" Nefedov Andrey Alexeevich", date.toString()));
-//        db.addContact(new Contact(" Gorelkin Alexander Sergeevich", date.toString()));
+//        db.addContact(new Contact(" Nefedov Andrey Alexeevich", dateString.toString()));
+//        db.addContact(new Contact(" Gorelkin Alexander Sergeevich", dateString.toString()));
 //        db.addContact(new Contact("Gosha", date.toString()));
 //        db.addContact(new Contact("Alexey", date.toString()));
 //        db.addContact(new Contact("Masha", date.toString()));
@@ -38,7 +42,7 @@ public class SecondActivity extends AppCompatActivity {
         List<Contact> contacts = db.getAllContacts();
 
         for (Contact c : contacts) {
-            String log = "ID: " + c.getId() + ", NAME: " + c.getName() + ", DATE: " + c.getDate() + "\n";
+            String log = "ID: " + c.getId() + "\nNAME: " + c.getName() + "\nDATE: " + c.getDate() + "\n+-------------------------------------+\n";
             text = text + log;
         }
 

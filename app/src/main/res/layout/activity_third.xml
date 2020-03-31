@@ -10,54 +10,30 @@
         android:id="@+id/textViewName"
         android:layout_width="77dp"
         android:layout_height="45dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginRight="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="601dp"
         android:text="NAME:"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/editTextName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewDate"
-        android:layout_width="86dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginBottom="547dp"
-        android:text="DATE:"
+        android:textColor="#142CC6"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginRight="33dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="211dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/AddButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="33dp"
-        android:layout_marginRight="33dp"
-        android:layout_marginBottom="87dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Date"
-        app:layout_constraintBottom_toTopOf="@+id/AddButton"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/AddButton"
@@ -67,8 +43,9 @@
         android:layout_marginLeft="145dp"
         android:layout_marginEnd="146dp"
         android:layout_marginRight="146dp"
-        android:layout_marginBottom="412dp"
+        android:layout_marginBottom="342dp"
         android:text="Add"
+        android:textColor="#CD2626"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -110,4 +110,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return cursor.getCount();
     }
+
+    public void deleteAll()
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("delete from " + TABLE_CONTACTS);
+        db.close();
+    }
+
 }

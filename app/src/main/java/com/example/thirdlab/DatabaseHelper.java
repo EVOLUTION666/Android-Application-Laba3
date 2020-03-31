@@ -106,9 +106,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String countQuery = "SELECT * FROM " + TABLE_CONTACTS;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
+        int contactsCount = cursor.getCount();
         cursor.close();
 
-        return cursor.getCount();
+        return contactsCount;
     }
 
     public void deleteAll()

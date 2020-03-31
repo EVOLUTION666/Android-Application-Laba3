@@ -2,6 +2,7 @@ package com.example.thirdlab;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.widget.TextView;
@@ -28,6 +29,7 @@ public class SecondActivity extends AppCompatActivity {
 
         DatabaseHelper db = new DatabaseHelper(this);
 
+
 //        db.deleteAll();
 
         //inserting contacts
@@ -42,7 +44,7 @@ public class SecondActivity extends AppCompatActivity {
         List<Contact> contacts = db.getAllContacts();
 
         for (Contact c : contacts) {
-            String log = "ID: " + c.getId() + "\nNAME: " + c.getName() + "\nDATE: " + c.getDate() + "\n+-------------------------------------+\n";
+            String log = "ID: " + c.getId() + "\nNAME: " + c.getName() + "\nDATE: " + c.getDate() + "\n+--------------------------------------------------------+\n";
             text = text + log;
         }
 
